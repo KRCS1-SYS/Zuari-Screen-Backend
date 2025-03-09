@@ -19,6 +19,7 @@ routerV1.delete('/machine/:id', machineController.deleteMachine);
 //Create Quality Params
 routerV1.get('/query', qualityParams.getAllQualityParams);
 routerV1.post('/query', qualityParams.createQualityParams);
+routerV1.put('/query/approve/:id', qualityParams.approveQualityParam);
 routerV1.patch('/query/:id', qualityParams.updateQualityParam);
 routerV1.delete('/query/:id', qualityParams.deleteQualityParam);
 routerV1.patch('/query/rollback/:id', qualityParams.rollbackQualityParam);
