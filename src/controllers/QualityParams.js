@@ -62,7 +62,7 @@ exports.getAllQualityParams = async (req, res) => {
   try {
     const qualityParams = await QualityParams.findAll({
       where: {
-        sap_approved: 1,
+        sap_approved: 0,
       },
     });
     res.json(qualityParams);
