@@ -60,7 +60,11 @@ exports.createQualityParams = async (req, res) => {
 
 exports.getAllQualityParams = async (req, res) => {
   try {
-    const qualityParams = await QualityParams.findAll();
+    const qualityParams = await QualityParams.findAll({
+      where: {
+        sap_approved: 1,
+      },
+    });
     res.json(qualityParams);
   } catch (error) {
     res.status(500).json({ error: error.message });

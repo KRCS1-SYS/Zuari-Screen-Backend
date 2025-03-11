@@ -78,6 +78,11 @@ const QualityParams = sequelize.define(
       allowNull: false,
       defaultValue: false,
     },
+    sap_approved: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
   },
   {
     tableName: "quality_params",
